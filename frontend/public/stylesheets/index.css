@@ -1,0 +1,27 @@
+body {
+    background-color: #142837;
+    color: #F0ECD0;
+    font-family: 'Open Sans';
+}
+
+button {
+    background-color: #365372;
+    text-decoration: none;
+    border: 0px solid #142837;
+    /* border-radius: 50px; */
+    color: #c4f1be;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-shadow: 1px 0px #81a5ba;
+}
+
+
+
+form input{
+    background-color: #142837;
+    border: 1px solid #3a5689;
+    color: #c4f1be;
+    height: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}

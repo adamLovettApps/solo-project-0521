@@ -1,3 +1,44 @@
+.navigation-bar-wrapper {
+    
+}
+
+.navigation-bar {
+    background-color: #365372;
+    padding: 0px;
+    margin:auto;
+    margin-top: 25px;
+    /* border: 1px solid #C4F1BE; */
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+}
+
 ul {
     list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #F0ECD0;
+
+}
+
+.concrt-logo {
+    height: 80px;
+}
+
+.login-btn {
+    height: 20px;
+    padding-bottom: 20px;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+.signup-btn {
+    margin-left: 0px;
+    margin-right: 10px;
+    margin-top: 40px;
+    font-size: 16px;
 }
