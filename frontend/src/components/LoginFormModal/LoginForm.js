@@ -22,32 +22,43 @@ function LoginForm() {
 
 
     return (
-            <div className='login-modal-form'>
+            <div className='login-form-wrapper'>
+                <span className='log-in-header'>Please Log In</span>
                 <form onSubmit={handleSubmit}>
                     <ul>
                         {errors.map((error, idx) => (
                             <li key={idx}>{error}</li>
                         ))}
                     </ul>
-                    <label>
-                        Username: 
-                    </label>
-                        <input
-                            type="text"
-                            value={credential}
-                            onChange={(e) => setCredential(e.target.value)}
-                            required
-                        />
-                    <label>
-                        Password: 
-                    </label>
-                        <input
-                            type="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            required
-                        />
-                    <button type="submit">Log In</button>
+                    <div className='login-modal-form'>
+                    <div className='form-field-input'>
+                        <label className='login-grid-username-label'>
+                            Username 
+                        </label>
+                            <input
+                                className='login-grid-username-input'
+                                type="text"
+                                value={credential}
+                                onChange={(e) => setCredential(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div className='form-field-input'> 
+                        <label className='login-grid-password-label'>
+                            Password 
+                        </label>
+                            <input
+                                className='login-grid-password-input'
+                                type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div className='form-field-button'>
+                            <button className='login-submit-button' type="submit">Log In</button>
+                        </div>
+                    </div>
                 </form>
             </div>
 
