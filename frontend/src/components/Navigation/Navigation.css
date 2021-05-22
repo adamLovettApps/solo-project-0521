@@ -4,15 +4,31 @@
 
 .navigation-bar {
     background-color: #365372;
+    
     padding: 0px;
     margin:auto;
     margin-top: 25px;
-    /* border: 1px solid #C4F1BE; */
-    border-radius: 20px;
+    border-bottom: 1px dashed #C4F1BE;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 90%;
+    max-width: 1200px;
+
+}
+
+.navigation-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-box-right {
+    justify-content: flex-end;
+}
+
+.navigation-box-left {
+    justify-content: flex-start;
 }
 
 ul {
@@ -32,13 +48,27 @@ a {
 .login-btn {
     height: 20px;
     padding-bottom: 20px;
-    margin-top: 40px;
+    margin-top: 50px;
     font-size: 16px;
+    background-color: rgba(0,0,0,0)
 }
 
 .signup-btn {
     margin-left: 0px;
-    margin-right: 10px;
-    margin-top: 40px;
+    margin-top: 50px;
     font-size: 16px;
+    margin-right: 10%;
+    background-color: rgba(0,0,0,0);
 }
+
+
+.logout-button {
+    margin-left: 0px;
+    margin-right: 10%;;
+    margin-top: 50px;
+    font-size: 16px;
+    background-color: rgba(0,0,0,0);
+    
+}
+
+

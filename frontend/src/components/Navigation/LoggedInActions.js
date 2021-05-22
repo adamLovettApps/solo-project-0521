@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
 
-function ProfileButton({ user }) {
+function LoggedInActions({ user }) {
     const dispatch = useDispatch();
     const [showMenu, setShowMenu] = useState(false);
     
@@ -29,21 +29,24 @@ function ProfileButton({ user }) {
     };
 
     return (
-        <>
-        <button onClick={openMenu}>
-            <i className="fas fa-user-circle" />
-        </button>
-        {showMenu && (
-            <ul className="profile-dropdown">
-                <li>{user.username}</li>
-                <li>{user.email}</li>
-                <li>
-                    <button onClick={logout}>Log Out</button>
-                </li>
-            </ul>
-        )}
-        </>
+        // <>
+        // <button onClick={openMenu}>
+        //     <i className="fas fa-user-circle" />
+        // </button>
+        // {showMenu && (
+        //     <ul className="profile-dropdown">
+        //         <li>{user.username}</li>
+        //         <li>{user.email}</li>
+        //         <li>
+        //             <button onClick={logout}>Log Out</button>
+        //         </li>
+        //     </ul>
+        // )}
+        // </>
+        <div className='logged-in-actions'>
+            <button className='logout-button' onClick={logout}>Log Out</button>
+        </div>
     );
 }
 
-export default ProfileButton;
+export default LoggedInActions;

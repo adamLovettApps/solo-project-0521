@@ -12,7 +12,10 @@ button {
     color: #c4f1be;
     padding-top: 5px;
     padding-bottom: 5px;
-    text-shadow: 1px 0px #81a5ba;
+}
+
+button:hover {
+    color: #A3EA9A;
 }
 
 
