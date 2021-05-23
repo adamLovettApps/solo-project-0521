@@ -18,10 +18,10 @@ module.exports = {
         allowNull: false,
         unique: true,
       },
-      profilePhotoURL: {
+      profilePhotoUrl: {
         type: Sequelize.STRING(256)
       },
-      coverPhotoUTL: {
+      coverPhotoUrl: {
         type: Sequelize.STRING(256)
       },
       hashedPassword: {
