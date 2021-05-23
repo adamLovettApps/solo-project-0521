@@ -8,7 +8,7 @@
     padding: 0px;
     margin:auto;
     margin-top: 25px;
-    border-bottom: 1px dashed #C4F1BE;
+    border-bottom: 1px dotted #C4F1BE;
     border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
     display: flex;
     justify-content: space-between;
@@ -71,4 +71,7 @@ a {
     
 }
 
-
+.logged-in-actions {
+    width: 80px;
+    margin-right: 40px;
+}

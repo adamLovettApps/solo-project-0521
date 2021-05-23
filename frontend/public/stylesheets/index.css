@@ -27,4 +27,12 @@ form input{
     height: 20px;
     margin-left: 5px;
     margin-right: 5px;
+    padding: 3px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: 1px solid #c4f1be;
 }
