@@ -1,0 +1,37 @@
+.user-banner-wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width: 1400px;
+    height: 200px;
+    border: 1px dotted #C4F1BE;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #0b161E;
+    margin-top: 8px;
+}
+
+.user-banner-header-photo{
+    display: flex;
+    justify-content: center;
+    width: 1400px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.profilePhoto {
+    position: relative;
+    left: -46.8%;
+    top: 3%;
+}
+
+.profileName {
+    position:absolute;
+    color: #C4F1BE;
+    font-size: 28px;
+    left: 18.5%;
+    background-color: rgba(20, 40, 55, 0.9);
+    padding-left: 10px;
+    padding-right:10px;
+    margin-top: 10px;
+    border-radius: 8px;
+}

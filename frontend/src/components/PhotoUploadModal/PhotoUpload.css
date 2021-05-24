@@ -1,0 +1,9 @@
+.photo-upload-btn{
+    position: absolute;
+    right: 275px;
+    top: 290px;
+    height: 24px;
+    font-size: 16px;
+    background-color: rgba(20, 40, 55, 0.9);
+    border-radius: 8px;
+}

@@ -1,0 +1,28 @@
+
+
+.photoContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+    
+}
+
+.gallery-image {
+    background-color: white;
+    display: inline-block;
+    border: 2px solid #20415A;
+    border-radius: 5px;
+}
+
+.gallery-image:hover {
+    opacity: .5;
+}
+
+.photoSpan {
+    align-items: center;
+    justify-items: center;
+}

@@ -32,7 +32,17 @@ form input{
 
 input:focus,
 select:focus,
-textarea:focus,
-button:focus {
+textarea:focus {
     outline: 1px solid #c4f1be;
+}
+
+button:focus {
+    outline: none;
+}
+
+input[type="button"]{
+    outline:none;
+}
+input[type="button"]::-moz-focus-inner {
+    border: 0;
 }

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import * as sessionActions from '../../store/session';
 import './Navigation.css'
 
 function LoggedInActions({ user }) {
+    const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
     const [showMenu, setShowMenu] = useState(false);
     
@@ -45,6 +47,7 @@ function LoggedInActions({ user }) {
         // )}
         // </>
         <div className='logged-in-actions'>
+            <NavLink to={`/users/${sessionUser.id}`}><button className='you-button'>Your Profile</button></NavLink>
             <button className='logout-button' onClick={logout}>Log Out</button>
         </div>
     );

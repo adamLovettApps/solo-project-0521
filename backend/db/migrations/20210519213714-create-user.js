@@ -19,10 +19,12 @@ module.exports = {
         unique: true,
       },
       profilePhotoUrl: {
-        type: Sequelize.STRING(256)
+        type: Sequelize.STRING(500),
+        defaultValue: 'https://concrt.s3.amazonaws.com/1621891195650.png'
       },
       coverPhotoUrl: {
-        type: Sequelize.STRING(256)
+        type: Sequelize.STRING(500),
+        defaultValue: 'https://concrt.s3.amazonaws.com/1621890923646.jpeg'
       },
       hashedPassword: {
         type: Sequelize.STRING.BINARY,

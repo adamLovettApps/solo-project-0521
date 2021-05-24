@@ -2,9 +2,13 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import sessionReducer from './session';
+import photoReducer from './photo';
+import currentPageReducer from './currentPage';
 
 const rootReducer = combineReducers({
     session: sessionReducer,
+    photos: photoReducer,
+    currentPage: currentPageReducer,
 });
 
 

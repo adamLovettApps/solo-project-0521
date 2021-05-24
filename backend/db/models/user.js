@@ -33,12 +33,12 @@ module.exports = (sequelize, DataTypes) => {
     profilePhotoUrl : {
       type: DataTypes.STRING,
       allowNull: true,
-      defaulValue: null
+      defaultValue: 'https://concrt.s3.amazonaws.com/1621891195650.png'
     },
     coverPhotoUrl : {
       type: DataTypes.STRING,
       allowNull: true,
-      defaulValue: null
+      defaultValue: 'https://concrt.s3.amazonaws.com/1621890923646.jpeg'
     }
   },
   {
@@ -61,8 +61,8 @@ module.exports = (sequelize, DataTypes) => {
   };
 
   User.prototype.toSafeObject = function() { // remember, this cannot be an arrow function
-    const { id, username, email } = this; // context will be the User instance
-    return { id, username, email };
+    const { id, username, email, profilePhotoUrl, coverPhotoUrl } = this; // context will be the User instance
+    return { id, username, email, profilePhotoUrl, coverPhotoUrl };
   };
 
   User.prototype.validatePassword = function (password) {

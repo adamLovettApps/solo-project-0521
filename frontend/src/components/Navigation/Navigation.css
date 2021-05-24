@@ -50,7 +50,8 @@ a {
     padding-bottom: 20px;
     margin-top: 50px;
     font-size: 16px;
-    background-color: rgba(0,0,0,0)
+    background-color: rgba(0,0,0,0);
+    outline: none;
 }
 
 .signup-btn {
@@ -59,19 +60,32 @@ a {
     font-size: 16px;
     margin-right: 10%;
     background-color: rgba(0,0,0,0);
+    outline: none;
 }
 
 
 .logout-button {
     margin-left: 0px;
-    margin-right: 10%;;
+    margin-right: 10%;
     margin-top: 50px;
     font-size: 16px;
     background-color: rgba(0,0,0,0);
-    
+    outline: none;
+}
+
+.you-button {
+    margin-left: 0px;
+    margin-top: 50px;
+    font-size: 16px;
+    background-color: rgba(0,0,0,0);
+    outline: none;
 }
 
 .logged-in-actions {
-    width: 80px;
-    margin-right: 40px;
+    width: 200px;
+    margin-right: 20px;
+}
+
+button:focus{
+    outline:none !important;
 }

@@ -45,4 +45,12 @@ router.post(
     }),
 );
 
+router.get('/:id', asyncHandler(async(req, res) => {
+    const id = parseInt(req.params.id);
+    const userview = await User.findByPk(id);
+
+
+    return res.json(userview);
+}))
+
 module.exports = router;
