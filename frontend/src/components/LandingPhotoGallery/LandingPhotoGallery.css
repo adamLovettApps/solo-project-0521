@@ -27,8 +27,13 @@
 
     align-items: center;
     justify-items: center;
-    padding: 4px;
+    padding: px;
     background-color:#050B0F;
-    border: 1px solid #365372;
+    /* border: 1px solid #365372; */
+    border: 1px dotted #C4F1BE;
     border-radius: 5px;
+}
+
+.photoSpan:hover {
+    border: 1px dotted #94E689;
 }

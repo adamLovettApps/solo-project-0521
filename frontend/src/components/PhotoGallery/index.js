@@ -3,8 +3,7 @@ import './PhotoGallery.css'
 const PhotoGallery = ({photos, user, id}) => {
 
     const photoArray = photos.photos;
-    console.log(user.id, id);
-    if (user.id !== +id){
+    if (user && user.id !== +id){
         return (
             <div className='photoContainerWrapper'>
             <div className='photoContainer'>
@@ -15,7 +14,7 @@ const PhotoGallery = ({photos, user, id}) => {
                         bucket: "concrt",
                         key: baseURL,
                         edits: {
-                            smartCrop: true,
+                            
                             resize: {
                                 width: 200,
                                 height:200,
@@ -49,7 +48,7 @@ const PhotoGallery = ({photos, user, id}) => {
                         bucket: "concrt",
                         key: baseURL,
                         edits: {
-                            smartCrop: true,
+                            
                             resize: {
                                 width: 200,
                                 height:200,

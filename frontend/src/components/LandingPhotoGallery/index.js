@@ -14,7 +14,7 @@ const LandingPhotoGallery = ({photos, user, id}) => {
                         bucket: "concrt",
                         key: baseURL,
                         edits: {
-                            smartCrop: true,
+                            
                             resize: {
                                 width: 200,
                                 height:200,
