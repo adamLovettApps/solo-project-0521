@@ -6,6 +6,7 @@ const { check } = require('express-validator');
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
 const { User } = require('../../db/models');
 const { handleValidationErrors } = require('../../utils/validation');
+const { singlePublicFileUpload, singleMulterUpload } = require('../../awsS3');
 
 const router = express.Router();
 
@@ -52,5 +53,22 @@ router.get('/:id', asyncHandler(async(req, res) => {
 
     return res.json(userview);
 }))
+
+
+router.put('/updateProfilePhoto/:id', singleMulterUpload("image"), asyncHandler(async(req, res) => {
+    const id = parseInt(req.params.id);
+    const user = await User.findByPk(id);
+    const profilePhotoUrl = await singlePublicFileUpload(req.file);
+    const updated = await user.update({profilePhotoUrl: profilePhotoUrl})
+    return res.json(updated);
+}));
+
+router.put('/updateCoverPhoto/:id', singleMulterUpload("image"), asyncHandler(async(req, res) => {
+    const id = parseInt(req.params.id);
+    const user = await User.findByPk(id);
+    const coverPhotoUrl = await singlePublicFileUpload(req.file);
+    const updated = await user.update({coverPhotoUrl: coverPhotoUrl})
+    return res.json(updated);
+}));
 
 module.exports = router;

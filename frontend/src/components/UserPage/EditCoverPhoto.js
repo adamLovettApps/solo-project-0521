@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { addNewPhoto } from "../../store/photo"
+import { updateCoverPhoto } from "../../store/currentPage"
 import { useDispatch, useSelector } from "react-redux";
-import './PhotoUpload.css'
+import './EditCoverPhoto.css';
 
-const PhotoUpload = ({setShowModal}) => {
+const EditCoverPhoto = ({setShowModal}) => {
     const [image, setImage] = useState(null);
   // for multuple file upload
   //   const [images, setImages] = useState([]);
@@ -16,17 +16,16 @@ const PhotoUpload = ({setShowModal}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         let newErrors = [];
-        dispatch(addNewPhoto({  image, user, caption }))
+        dispatch(updateCoverPhoto({ image, user }))
         setImage(null);
         setShowModal(false);
-
     };
 
     const updateFile = (e) => {
         const file = e.target.files[0];
         if (file) {
             setImage(file);
-            const fileSelected = document.querySelectorAll('.display-file-selected')[0];
+            const fileSelected = document.querySelectorAll('.display-cover-file-selected')[0];
             fileSelected.style.display = 'block';
         }
     };
@@ -37,7 +36,7 @@ const PhotoUpload = ({setShowModal}) => {
             errors.map((error) => <div key={error}>{error}</div>)}
         
         <div className='add-photo-form-wrapper'>
-        <span className='add-photo-header'>Add a Photo</span>
+        <span className='add-photo-header'>Change Your Cover Photo</span>
         <form
             onSubmit={handleSubmit}
         >
@@ -45,11 +44,7 @@ const PhotoUpload = ({setShowModal}) => {
                 <label>Select Image</label>
                 <input className='photo-file-input' type="file" onChange={updateFile} />
             </div>
-            <div className='form-field-input'>
-                <label>Caption</label>
-                <textarea value={caption} onChange={(e) => setCaption(e.target.value)}></textarea>
-            </div>
-            <span style={{display: 'none'}} className='display-file-selected'>Photo Chosen</span>
+            <span style={{display: 'none'}} className='display-cover-file-selected'>Photo Chosen</span>
             <div className='form-field-button'>
             <button type="submit" className='form-field-button' disabled={image === null ? true: false}>Add Photo</button>
             </div>
@@ -60,4 +55,4 @@ const PhotoUpload = ({setShowModal}) => {
     );
 };
 
-export default PhotoUpload;
+export default EditCoverPhoto;

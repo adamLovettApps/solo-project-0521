@@ -11,7 +11,11 @@ module.exports = (sequelize, DataTypes) => {
     Photo.belongsTo(models.User, { foreignKey: "userId"});
     Photo.belongsTo(models.Album, { foreignKey: "albumId"});
     Photo.hasMany(models.Favorite, { foreignKey: "photoId"})
-    Photo.hasMany(models.Comment, { foreignKey: "photoId"})
+    Photo.hasMany(models.Comment, { 
+      foreignKey: "photoId", 
+      onDelete: "CASCADE",
+      hooks: true,
+    })
     const columnMapping = {
       foreignKey: 'photoId',
       through: 'PhotoTag',

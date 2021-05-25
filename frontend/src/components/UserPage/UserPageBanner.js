@@ -7,6 +7,8 @@ import { useParams } from 'react-router-dom';
 import { addAllPhotos } from '../../store/photo';
 import currentPageReducer, { getCurrentUserPage } from '../../store/currentPage';
 import PhotoUploadModal from '../PhotoUploadModal';
+import EditProfilePhotoModal from './EditProfilePhotoModal';
+import EditCoverPhotoModal from './EditCoverPhotoModal';
 import './UserBanner.css'
 
 
@@ -14,7 +16,7 @@ const UserPageBanner = (loggedUser) => {
     const {id} = useParams();
     const dispatch = useDispatch();
     const currentUserPage = useSelector((state) => state.currentPage)
-    
+
     useEffect(() => {
         dispatch(getCurrentUserPage(id));
     }, [dispatch, id])
@@ -25,7 +27,7 @@ const UserPageBanner = (loggedUser) => {
                     bucket: "concrt",
                     key: baseURL,
                     edits: {
-                        smartCrop: true,
+                        
                         resize: {
                             width: 1400,
                             height:300,
@@ -37,13 +39,13 @@ const UserPageBanner = (loggedUser) => {
             const encoded = btoa(imageRequest);
             const url = `https://d31oyr2ur6cysk.cloudfront.net/${encoded}`;
 
+            
 
             const baseProfileURL = currentUserPage.currentUserPage.profilePhotoUrl.split('/')[3];
                 const profileImageRequest = JSON.stringify({
                     bucket: "concrt",
                     key: baseProfileURL,
                     edits: {
-                        smartCrop: true,
                         roundCrop: true,
                         resize: {
                             height:80,
@@ -63,6 +65,8 @@ const UserPageBanner = (loggedUser) => {
                 <div style={{backgroundImage:`url(${url})`}} className='user-banner-header-photo'>
                     <span className="profilePhoto"><img alt="Profile" src={profileUrl}></img> </span>
                     <span className="profileName">{currentUserPage.currentUserPage.username}'s Concrts</span>
+                    <EditCoverPhotoModal></EditCoverPhotoModal>
+                    <EditProfilePhotoModal></EditProfilePhotoModal>
                     <PhotoUploadModal></PhotoUploadModal>
                 </div>
                 </div>
@@ -75,7 +79,7 @@ const UserPageBanner = (loggedUser) => {
                     bucket: "concrt",
                     key: baseURL,
                     edits: {
-                        smartCrop: true,
+                        
                         resize: {
                             width: 1400,
                             height:300,
@@ -92,7 +96,6 @@ const UserPageBanner = (loggedUser) => {
                     bucket: "concrt",
                     key: baseProfileURL,
                     edits: {
-                        smartCrop: true,
                         roundCrop: true,
                         resize: {
                             height:80,
@@ -120,7 +123,7 @@ const UserPageBanner = (loggedUser) => {
                     bucket: "concrt",
                     key: baseURL,
                     edits: {
-                        smartCrop: true,
+                        
                         resize: {
                             width: 1400,
                             height:300,
@@ -137,7 +140,6 @@ const UserPageBanner = (loggedUser) => {
                     bucket: "concrt",
                     key: baseProfileURL,
                     edits: {
-                        smartCrop: true,
                         roundCrop: true,
                         resize: {
                             height:80,

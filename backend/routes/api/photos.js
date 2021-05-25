@@ -27,7 +27,8 @@ router.post(
     asyncHandler(async (req, res) => {
         const userId = parseInt(req.params.id, 10);
         const profileImageUrl = await singlePublicFileUpload(req.file);
-        const caption = req.caption
+        const {caption} = req.body;
+        console.log(caption);
         const photoBuild = Photo.build({
             userId,
             url: profileImageUrl,
@@ -64,6 +65,20 @@ router.get("/:id", asyncHandler(async(req, res) => {
     })
 
     return res.json(photos);
+}));
+
+router.delete("/:id", asyncHandler(async(req, res) => {
+    const id = parseInt(req.params.id, 10);
+
+    const photo = await Photo.destroy({
+        where: {
+            id: id
+        }
+    });
+
+    await photo.destroy;
+
+    return res.json();
 }));
 
 module.exports = router;

@@ -40,3 +40,27 @@
     margin-top: 10px;
     
 }
+
+.edit-profile-photo {
+    position: absolute;
+    left: 320px;
+    top: 190px;
+    color:rgba(196, 241, 190, 0.6);
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.3);;
+}
+
+.edit-profile-photo:hover {
+    color: rgba(148, 230, 137, 0.6)
+}
+
+.edit-cover-photo {
+    position: absolute;
+    left: 1635px;
+    top: 130px;
+    color:rgba(196, 241, 190, 0.6);
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.3);;
+}
+
+.edit-cover-photo:hover {
+    color: rgba(148, 230, 137, 0.6)
+}

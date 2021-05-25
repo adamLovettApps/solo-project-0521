@@ -1,5 +1,7 @@
 import React from 'react';
+import PhotoShowModal from '../PhotoShowModal';
 import './PhotoGallery.css'
+
 const PhotoGallery = ({photos, user, id}) => {
 
     const photoArray = photos.photos;
@@ -28,7 +30,7 @@ const PhotoGallery = ({photos, user, id}) => {
 
                         return(
                             
-                        <span key={photo.id} className="photoSpan"><img className='gallery-image' alt='unknown' key={photo.id} src={url}></img></span>
+                        <span key={photo.id} className="photoSpan"><PhotoShowModal photo={photo}></PhotoShowModal><img className='gallery-image' alt='unknown' key={photo.id} src={url}></img></span>
                             
                         )
         
@@ -63,7 +65,7 @@ const PhotoGallery = ({photos, user, id}) => {
                         return(
                         <>  
                     
-                            <span key={photo.id} className="photoSpan"><img className='user-gallery-image' alt='unknown' key={photo.id} src={url}></img></span>
+                            <span key={photo.id} className="photoSpan"><PhotoShowModal photo={photo}></PhotoShowModal><img className='user-gallery-image' alt='unknown' key={photo.id} src={url}></img></span>
                         
                         
                         </>

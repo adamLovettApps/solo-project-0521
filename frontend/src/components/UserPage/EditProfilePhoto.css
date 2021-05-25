@@ -1,0 +1,48 @@
+.add-photo-header {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    margin-bottom: -5px;
+}
+
+.form-field-input {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    margin-bottom: 1px;
+    /* border: 1px solid #2e4761;
+    border-radius: 5px; */
+}
+.add-photo-form-wrapper {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.form-field-button {
+
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(0,0,0,0);
+}
+
+.photo-file-input {
+    height: 30px;
+    position:relative;
+    left: 80px;
+}
+
+input[type=file] {
+    background-color: rgba(0,0,0,0);
+    border:none;
+    color: transparent;
+}
+
+.display-profile-file-selected {
+    color: #C4F1BE;
+    position: relative;
+    left: 280px;
+    top: -33px;
+    font-size: 14px;
+
+}

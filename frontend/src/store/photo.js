@@ -3,6 +3,7 @@ import { csrfFetch } from './csrf';
 const ADD_PHOTO = "photo/addPhoto";
 const ADD_ALL = "photos/addAll";
 const REMOVE_ALL = "photos/removeAll";
+const REMOVE_PHOTO = "photos/removePhoto";
 
 const addPhoto = photo => ({
     type: ADD_PHOTO,
@@ -17,6 +18,19 @@ const addAll = photos => ({
 const removeAll = () => ({
     type: REMOVE_ALL,
 });
+
+const removePhoto = (id) => ({
+    type: REMOVE_PHOTO,
+    payload: id
+})
+
+export const removeCurrentPhoto = (id) => async (dispatch) => {
+    const res = await csrfFetch(`/api/photos/${id}`, {
+        method: "DELETE"
+    });
+
+    dispatch(removePhoto(id));
+}
 
 export const addAllPhotos = (id) => async (dispatch) => {
     
@@ -70,6 +84,10 @@ const photoReducer = (state = initialState, action) => {
             return { ...state, photos: [action.payload, ...state.photos], currentPhotos: [action.payload, ...state.photos]};
         case REMOVE_ALL:
             return { ...state, photos: [], currentPhotos: []};
+        case REMOVE_PHOTO:
+            const photoArray = [...state.photos];
+            const newPhotoArray = photoArray.filter((photo) => photo.id !== action.payload);
+            return {...state, photos: newPhotoArray}
         default:
             return state;
     }

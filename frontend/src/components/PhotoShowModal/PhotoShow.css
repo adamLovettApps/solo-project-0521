@@ -1,0 +1,77 @@
+.photo-show-btn {
+    width: 210px;
+    height: 210px;
+    background:transparent;
+    border:none;
+    outline:none;
+    display:block;
+    cursor:pointer;
+    position:absolute;
+}
+
+.photo-show-modal {
+    display: inline-block;
+    height: 900px;
+    width: 700px;
+    margin: 0 auto;
+    overflow-y: auto;
+    position:relative;
+    text-align: center;
+    /* background-color:  #142837;; */
+}
+
+.photo-show {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.photo-div {
+    width: 600px;
+    position:relative;
+    left: 45px;
+    margin-top: 15px;
+    padding: 5px;
+    background-color: #142837;
+    border: 1px dotted #C4F1BE;
+    border-radius: 5px;
+}
+
+.delete-image-icon {
+    position: absolute;
+    left: 625px;
+    top: 27px;
+    font-size: 20px;
+    color:rgba(196, 241, 190, 0.6);
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.3);;
+}
+
+.delete-icon-container-hidden{
+    visibility: hidden;
+}
+.delete-image-icon:hover {
+    color: rgba(148, 230, 137, 0.6);
+}
+
+
+.caption-container {
+    width: 600px;
+    margin-right: 50px;
+    margin-left: 50px;
+    background-color: #142837;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px dotted #C4F1BE;
+    border-radius: 5px;
+}
+
+.edit-icon {
+    position: relative;
+    left: 335px;
+    top: -25px;
+    color:rgba(196, 241, 190, 0.6);
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.edit-icon:hover {
+    color: rgba(148, 230, 137, 0.6);
+}
