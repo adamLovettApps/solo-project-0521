@@ -1,0 +1,43 @@
+.landing-page-banner-wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width: 1400px;
+    height: 200px;
+    border: 1px dotted #C4F1BE;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #0b161E;
+    margin-top: 10px;
+}
+
+.landing-page-banner-header-photo{
+    display: flex;
+    justify-content: center;
+    width: 1400px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.splash-text-start {
+    position: absolute;
+    left: 275px;
+    top: 125px;
+    color: #C4F1BE;
+    text-shadow: 1px 1px #142837, -1px 1px #142837;
+    font-size: 24px;
+    background-color: rgba(11, 22, 30, .05);
+    border-radius: 30px;
+
+}
+
+.splash-text-end {
+    position: absolute;
+    left: 1590px;
+    top: 285px;
+    color: #C4F1BE;
+    text-shadow: 1px 1px #142837, -1px 1px #142837;
+    font-size: 24px;
+    background-color: rgba(11, 22, 30, .05);
+    border-radius: 30px;
+
+}

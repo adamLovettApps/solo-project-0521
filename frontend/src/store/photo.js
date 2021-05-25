@@ -30,11 +30,24 @@ export const addAllPhotos = (id) => async (dispatch) => {
     // dispatch(addAll(data));
 }
 
+export const addAllPhotosGlobal = (id) => async (dispatch) => {
+    
+    const res = await csrfFetch(`/api/photos/`, {
+        method: "GET"
+    });
+
+    const data = await res.json();
+    dispatch(removeAll());
+    data.forEach((photo) => dispatch(addPhoto(photo)));
+    // dispatch(addAll(data));
+}
+
 export const addNewPhoto = photo => async (dispatch) => {
-    const {image, user} = photo;
+    const {image, user, caption} = photo;
 
     const formData = new FormData();
     if (image) formData.append("image", image);
+    if (caption) formData.append("caption", caption)
 
     const res = await csrfFetch(`/api/photos/${user.id}`, {
         method: "POST",

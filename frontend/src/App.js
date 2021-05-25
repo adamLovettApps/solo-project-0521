@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import UserPage from "./components/UserPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
+import LandingPage from "./components/LandingPage"
 
 function App() {
   const dispatch = useDispatch();
@@ -17,6 +18,9 @@ function App() {
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
+          <Route exact path='/'>
+            <LandingPage></LandingPage>
+          </Route>
             <Route path='/users/:id'>
               <UserPage />
             </Route>

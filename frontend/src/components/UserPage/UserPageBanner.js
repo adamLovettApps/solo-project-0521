@@ -30,7 +30,8 @@ const UserPageBanner = (loggedUser) => {
                             width: 1400,
                             height:300,
                             fit: "cover"
-                        }
+                        },
+                        
                     }
                 })
             const encoded = btoa(imageRequest);
@@ -47,7 +48,9 @@ const UserPageBanner = (loggedUser) => {
                         resize: {
                             height:80,
                             fit: "cover"
-                        }
+                        },
+                        
+                        
                     }
                 })
             const encodedProfile = btoa(profileImageRequest);

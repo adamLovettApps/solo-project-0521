@@ -27,11 +27,12 @@ router.post(
     asyncHandler(async (req, res) => {
         const userId = parseInt(req.params.id, 10);
         const profileImageUrl = await singlePublicFileUpload(req.file);
+        const caption = req.caption
         const photoBuild = Photo.build({
             userId,
             url: profileImageUrl,
             albumId: null,
-            caption: null
+            caption: caption
         })
 
         const newPhoto = await photoBuild.save();
@@ -41,6 +42,16 @@ router.post(
         });
     })
 );
+
+router.get("/", asyncHandler(async(req, res) => {
+
+
+    const photos = await Photo.findAll({
+        order: [['createdAt', 'ASC']]
+    })
+
+    return res.json(photos);
+}));
 
 router.get("/:id", asyncHandler(async(req, res) => {
     const userId = parseInt(req.params.id, 10);

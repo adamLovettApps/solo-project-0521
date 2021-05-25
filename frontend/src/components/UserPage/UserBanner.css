@@ -7,7 +7,7 @@
     border-radius: 5px;
     padding: 5px;
     background-color: #0b161E;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 .user-banner-header-photo{
@@ -34,4 +34,9 @@
     padding-right:10px;
     margin-top: 10px;
     border-radius: 8px;
+}
+
+.photo-content-display {
+    margin-top: 10px;
+    
 }

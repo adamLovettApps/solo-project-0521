@@ -47,7 +47,7 @@ function LoggedInActions({ user }) {
         // )}
         // </>
         <div className='logged-in-actions'>
-            <NavLink to={`/users/${sessionUser.id}`}><button className='you-button'>Your Profile</button></NavLink>
+            <NavLink to={`/users/${sessionUser.id}`}><button className='you-button'>Your Concrts</button></NavLink>
             <button className='logout-button' onClick={logout}>Log Out</button>
         </div>
     );

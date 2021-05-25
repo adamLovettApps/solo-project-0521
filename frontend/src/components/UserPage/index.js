@@ -32,13 +32,13 @@ function UserPage() {
 
 
     if (photoArray.length) {
-        content = ( <PhotoGallery photos={photos}></PhotoGallery> );
+        content = ( <PhotoGallery user={user} id={id} photos={photos}></PhotoGallery> );
     } 
     return (
         <div>
             <UserPageBanner loggedUser={user}></UserPageBanner>
             {/* <PhotoGallery photos={photos}></PhotoGallery> */}
-            {content}
+            <div className="photo-content-display">{content}</div>
         </div>
     )
 }

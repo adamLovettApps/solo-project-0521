@@ -23,20 +23,6 @@
     opacity: .5;
 }
 
-.user-gallery-image {
-    background-color: white;
-    display: inline-block;
-    /* border: 1px solid #365372; */
-    border-radius: 5px;
-    
-}
-
-.user-gallery-image:hover {
-    opacity: .5;
-}
-
-
-
 .photoSpan {
 
     align-items: center;
