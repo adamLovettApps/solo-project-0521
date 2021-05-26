@@ -4,6 +4,8 @@ const ADD_PHOTO = "photo/addPhoto";
 const ADD_ALL = "photos/addAll";
 const REMOVE_ALL = "photos/removeAll";
 const REMOVE_PHOTO = "photos/removePhoto";
+const UPDATE_CAPTION = "photos/updateCaption";
+
 
 const addPhoto = photo => ({
     type: ADD_PHOTO,
@@ -23,6 +25,24 @@ const removePhoto = (id) => ({
     type: REMOVE_PHOTO,
     payload: id
 })
+
+const updateCaption = (photoInfo) => ({
+    type: UPDATE_CAPTION,
+    payload: photoInfo
+})
+
+export const updatePhotoCaption = photoInfo => async (dispatch) => {
+    const {id, caption} = photoInfo;
+    const res = await csrfFetch(`/api/photos/updateCaption/${id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: caption,
+    });
+
+    dispatch(updateCaption(photoInfo));
+}
 
 export const removeCurrentPhoto = (id) => async (dispatch) => {
     const res = await csrfFetch(`/api/photos/${id}`, {

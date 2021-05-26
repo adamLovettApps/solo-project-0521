@@ -81,4 +81,13 @@ router.delete("/:id", asyncHandler(async(req, res) => {
     return res.json();
 }));
 
+
+router.put('/updateCaption/:id', asyncHandler(async(req, res) => {
+    const id = parseInt(req.params.id);
+    const { caption } = req.body;
+    const photo = await Photo.findByPk(id);
+    const updated = await photo.update({caption: caption})
+    return res.json(updated);
+}));
+
 module.exports = router;

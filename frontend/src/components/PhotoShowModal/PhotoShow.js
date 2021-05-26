@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeCurrentPhoto } from '../../store/photo';
+import EditCaptionModal from '../EditCaptionModal';
 import './PhotoShow.css';
 
 function PhotoShow({photo, setShowModal}) {
@@ -31,14 +32,9 @@ function PhotoShow({photo, setShowModal}) {
     let caption;
 
     if (photo.caption) {
-        caption = (<div className='caption-container'>{photo.caption}</div>)
+        caption = (<><div className='caption-container'>{photo.caption}<div className='edit-caption-content'><EditCaptionModal photo={photo}></EditCaptionModal></div></div></>)
     }
 
-    let editIcon;
-
-    if (photo.caption) {
-        editIcon = <i className="fas fa-user-edit edit-icon"></i>
-    }
 
     if (sessionUser.id === currentUserPage.id){
         return (
@@ -70,7 +66,6 @@ function PhotoShow({photo, setShowModal}) {
                 </i>
             </div>
                 {caption}
-                {editIcon}
             </div>
         );
     } else {

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Modal } from '../../context/Modal';
 import EditCaption from './EditCaption';
-import './LoginForm.css';
+import './EditCaption.css';
 
-function EditCaptionModal() {
+function EditCaptionModal({photo}) {
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
@@ -12,10 +12,10 @@ function EditCaptionModal() {
 
     return (
         <>
-            <button className = 'btn login-btn' onClick={() => setShowModal(true)}>Log In</button>
+            <i className="fas fa-user-edit edit-icon" onClick={() => setShowModal(true)}></i>
             {showModal && (
-                <Modal setShowModal={setShowModal} className='login-form' onClose={() => setShowModal(false)}>
-                <EditCaption />
+                <Modal className='edit-caption-form' onClose={() => setShowModal(false)}>
+                    {/* <EditCaption photo={photo} setShowModal={setShowModal}/> */}
                 </Modal>
             )}
         </>
