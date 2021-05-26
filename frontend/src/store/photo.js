@@ -42,7 +42,7 @@ export const updatePhotoCaption = photoInfo => async (dispatch) => {
         body: JSON.stringify(photoInfo)
     });
 
-    //dispatch(updateCaption(photoInfo));
+    dispatch(updateCaption(photoInfo));
 }
 
 export const removeCurrentPhoto = (id) => async (dispatch) => {
@@ -109,6 +109,20 @@ const photoReducer = (state = initialState, action) => {
             const photoArray = [...state.photos];
             const newPhotoArray = photoArray.filter((photo) => photo.id !== action.payload);
             return {...state, photos: newPhotoArray}
+        case UPDATE_CAPTION:
+            const newArray = [...state.photos];
+            const id = action.payload.id;
+            const newCaption = action.payload.caption;
+            newArray.forEach((photo) => {
+                if (photo.id === id) {
+                    photo.caption = newCaption;
+                }
+            })
+            // console.log("STATE", state.photos)
+            // console.log("PAYLOAD", action.payload)
+            // console.log("id", id)
+            // console.log("caption", newCaption);
+            return {...state, photos: newArray};
         default:
             return state;
     }
