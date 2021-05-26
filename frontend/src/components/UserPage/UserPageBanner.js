@@ -60,16 +60,22 @@ const UserPageBanner = (loggedUser) => {
 
 
             return (
-                
+                <>
                 <div className='user-banner-wrapper'>
-                <div style={{backgroundImage:`url(${url})`}} className='user-banner-header-photo'>
-                    <span className="profilePhoto"><img alt="Profile" src={profileUrl}></img> </span>
-                    <span className="profileName">{currentUserPage.currentUserPage.username}'s Concrts</span>
-                    <EditCoverPhotoModal></EditCoverPhotoModal>
-                    <EditProfilePhotoModal></EditProfilePhotoModal>
-                    <PhotoUploadModal></PhotoUploadModal>
+                <div style={{backgroundImage:`url(${url})`}} className='user-banner-header-photo'></div>
                 </div>
-                </div>
+                    <div className='header-info-container'>
+                        <div className='left-side-header'>
+                            <span className="activeProfilePhoto"><img alt="Profile" src={profileUrl}></img> </span>
+                            <span className="activeProfileName">{currentUserPage.currentUserPage.username}'s Concrts</span>    
+                            <EditProfilePhotoModal></EditProfilePhotoModal>        
+                        </div>
+                        <div className='left-side-header'>    
+                            <EditCoverPhotoModal></EditCoverPhotoModal>
+                            <PhotoUploadModal></PhotoUploadModal>
+                        </div>
+                    </div>
+                </>
             )
         
         }else {
@@ -111,9 +117,10 @@ const UserPageBanner = (loggedUser) => {
                 
                 <div className='user-banner-wrapper'>
                 <div style={{backgroundImage:`url(${url})`}} className='user-banner-header-photo'>
-                    <span className="profilePhoto"><img alt="Profile" src={profileUrl}></img> </span>
-                    <span className="profileName">{currentUserPage.currentUserPage.username}'s Concrts</span>
-                </div>
+                    </div>
+                    
+                    <div className="profilePhoto"><img alt="Profile" src={profileUrl}></img> </div>
+                    <div className="profileName">{currentUserPage.currentUserPage.username}'s Concrts</div>
                 </div>
             )
     }
@@ -155,9 +162,10 @@ const UserPageBanner = (loggedUser) => {
                 
                 <div className='user-banner-wrapper'>
                 <div style={{backgroundImage:`url(${url})`}} className='user-banner-header-photo'>
-                    <span className="profilePhoto"><img alt="Profile" src={profileUrl}></img> </span>
-                    <span className="profileName">{currentUserPage.currentUserPage.username}'s Concrts</span>
-                </div>
+                    </div>
+                    
+                    <div className="profilePhoto"><img alt="Profile" src={profileUrl}></img> </div>
+                    <div className="profileName">{currentUserPage.currentUserPage.username}'s Concrts</div>
                 </div>
             )
     }else {

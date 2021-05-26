@@ -30,23 +30,24 @@ function EditCaption({setShowModal, photo}) {
 
 
     return (
-            <div className='login-form-wrapper'>
-                <span className='log-in-header'>Edit Your Caption</span>
+            <div className='edit-caption-form-wrapper'>
+                <span className='edit-caption-header'>Edit Your Caption</span>
                 <form onSubmit={handleSubmit}>
                     <div className='login-modal-form'>
                     <div className='form-field-input'>
-                        <label className='login-grid-username-label'>
+                        {/* <label className='edit-caption-label'>
                             Caption 
                         </label>
+                        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> */}
                             <textarea
-                                className='login-grid-username-input'
+                                className='edit-caption-input'
                                 value={caption}
                                 onChange={(e) => setCaption(e.target.value)}
                                 required
                             />
                         </div>
                         <div className='form-field-button'>
-                            <button className='login-submit-button' type="submit">Edit</button>
+                            <button className='edit-caption-submit-button' type="submit">Edit</button>
                         </div>
                     </div>
                 </form>

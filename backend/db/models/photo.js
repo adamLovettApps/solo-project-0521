@@ -4,7 +4,10 @@ module.exports = (sequelize, DataTypes) => {
     albumId: DataTypes.INTEGER,
     userId: DataTypes.INTEGER,
     url: DataTypes.STRING,
-    caption: DataTypes.STRING
+    caption: {
+      type: DataTypes.TEXT,
+      defaultValue: "The band played on..."
+    }
   }, {});
   Photo.associate = function(models) {
     // associations can be defined here

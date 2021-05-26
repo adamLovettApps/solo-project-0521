@@ -31,51 +31,64 @@ function PhotoShow({photo, setShowModal}) {
     const url = `https://d31oyr2ur6cysk.cloudfront.net/${encoded}`;
 
     let caption;
-
-    if (photo.caption) {
-        caption = (<><div className='caption-container'>{photo.caption}<div className='edit-caption-content'><EditCaptionModal photo={photo}></EditCaptionModal></div></div></>)
+    if (sessionUser){
+        if (sessionUser.id === photo.userId) {
+            caption = (<><div className='caption-container'>{photo.caption}<div className='edit-caption-content'><EditCaptionModal photo={photo}></EditCaptionModal></div></div></>);
+        } else {
+            caption = (<><div className='caption-container'>{photo.caption}</div></>);
+        }
+    } else {
+        caption = (<><div className='caption-container'>{photo.caption}</div></>);
     }
 
-
-    if (sessionUser.id === currentUserPage.id){
-        return (
-            <div className='photo-show-modal'>
-            <div className='photo-div'
-                onMouseOver={() => 
-                    document.getElementById('delete-icon-container').classList.remove('delete-icon-container-hidden')
-                }
-                onMouseLeave={() => 
-                    document.getElementById('delete-icon-container').classList.add('delete-icon-container-hidden')
-                }
-            >
-                <img alt="Concert" src={url}
-                    onMouseOver={() => 
-                    document.getElementById('delete-icon-container').classList.remove('delete-icon-container-hidden')
-                }
-                onMouseLeave={() => 
-                    document.getElementById('delete-icon-container').classList.add('delete-icon-container-hidden')
-                }
-                ></img>
-            </div>
-            <div id='delete-icon-container' className='delete-icon-container-hidden'>
-                <i className="fas fa-times-circle delete-image-icon" 
+    if (sessionUser) {
+        if (sessionUser.id === currentUserPage.id){
+            return (
+                <div className='photo-show-modal'>
+                <div className='photo-div'
                     onMouseOver={() => 
                         document.getElementById('delete-icon-container').classList.remove('delete-icon-container-hidden')
-                    } 
-                    onClick={clickHandler}
+                    }
+                    onMouseLeave={() => 
+                        document.getElementById('delete-icon-container').classList.add('delete-icon-container-hidden')
+                    }
                 >
-                </i>
-            </div>
+                    <img alt="Concert" src={url}
+                        onMouseOver={() => 
+                        document.getElementById('delete-icon-container').classList.remove('delete-icon-container-hidden')
+                    }
+                    onMouseLeave={() => 
+                        document.getElementById('delete-icon-container').classList.add('delete-icon-container-hidden')
+                    }
+                    ></img>
+                </div>
+                <div id='delete-icon-container' className='delete-icon-container-hidden'>
+                    <i className="fas fa-times-circle delete-image-icon" 
+                        onMouseOver={() => 
+                            document.getElementById('delete-icon-container').classList.remove('delete-icon-container-hidden')
+                        } 
+                        onClick={clickHandler}
+                    >
+                    </i>
+                </div>
+                    {caption}
+                </div>
+            );
+        } else {
+            return (
+                <div className='photo-show-modal'>
+                <div className='photo-div'><img alt="Concert" src={url}></img></div>
                 {caption}
-            </div>
-        );
+                </div>
+            );
+        }
     } else {
         return (
-            <div className='photo-show-modal'>
-            <div className='photo-div'><img alt="Concert" src={url}></img></div>
-            {caption}
-            </div>
-        );
+                <div className='photo-show-modal'>
+                <div className='photo-div'><img alt="Concert" src={url}></img></div>
+                {caption}
+                </div>
+            );
     }
 }
 

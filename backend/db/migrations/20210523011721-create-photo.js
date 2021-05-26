@@ -20,7 +20,8 @@ module.exports = {
         allowNull: false
       },
       caption: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        defaultValue: "The band played on..."
       },
       createdAt: {
         allowNull: false,

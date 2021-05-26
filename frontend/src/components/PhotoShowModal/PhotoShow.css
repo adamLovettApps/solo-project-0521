@@ -1,7 +1,18 @@
 .photo-show-btn {
-    width: 210px;
-    height: 210px;
+    width: 200px;
+    height: 200px;
     background:transparent;
+    border:none;
+    outline:none;
+    display:block;
+    cursor:pointer;
+    position:absolute;
+}
+
+.photo-show-btn:hover {
+    width: 200px;
+    height: 200px;
+    background:rgba(0,0,0,0.45);
     border:none;
     outline:none;
     display:block;

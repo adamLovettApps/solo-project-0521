@@ -1,7 +1,11 @@
+:root {
+    --window-size: 0;
+}
+
 .user-banner-wrapper {
     margin-left:auto;
     margin-right:auto;
-    width: 1400px;
+    max-width: 1400px;
     height: 200px;
     border: 1px dotted #C4F1BE;
     border-radius: 5px;
@@ -13,38 +17,50 @@
 .user-banner-header-photo{
     display: flex;
     justify-content: center;
-    width: 1400px;
+    max-width: 1400px;
     height: 200px;
     border-radius: 5px;
 }
 
-.profilePhoto {
+.header-info-container {
+    margin-left:auto;
+    margin-right:auto;
+    height: 200px;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
     position: relative;
-    left: -46.8%;
-    top: 3%;
+    bottom: 200px;
+    margin-bottom: -200px;
 }
 
-.profileName {
-    position:absolute;
+.activeProfilePhoto {
+    position: relative;
+    left: 5px;
+
+}
+
+.activeProfileName {
+    position: relative;
+    bottom: 45px;
+    left: 5px;
+    height:40px;
     color: #C4F1BE;
     font-size: 28px;
-    left: 18.5%;
+
     background-color: rgba(20, 40, 55, 0.9);
     padding-left: 10px;
     padding-right:10px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     border-radius: 8px;
+    display: inline-block;
 }
 
-.photo-content-display {
-    margin-top: 10px;
-    
-}
 
 .edit-profile-photo {
-    position: absolute;
-    left: 320px;
-    top: 190px;
+    position: relative;
+    right: 235px;
+    bottom: 5px;
     color:rgba(196, 241, 190, 0.6);
     text-shadow: 1px 1px rgba(255, 255, 255, 0.3);;
 }
@@ -54,13 +70,50 @@
 }
 
 .edit-cover-photo {
-    position: absolute;
-    left: 1635px;
-    top: 130px;
+    position: relative;
+    left: 90px;
     color:rgba(196, 241, 190, 0.6);
     text-shadow: 1px 1px rgba(255, 255, 255, 0.3);;
 }
 
 .edit-cover-photo:hover {
     color: rgba(148, 230, 137, 0.6)
+}
+
+.photo-upload-btn{
+    position: relative;
+    top: 160px;
+    right: 10px;
+    height: 27px;
+    font-size: 16px;
+    background-color: rgba(20, 40, 55, 0.9);
+    border-radius: 8px;
+}
+
+.profilePhoto {
+    position: relative;
+    bottom: 195px;
+    left: 5px;
+}
+
+.profileName {
+    position: relative;
+    bottom: 270px;
+    left: 90px;
+    
+    height:40px;
+    color: #C4F1BE;
+    font-size: 28px;
+
+    background-color: rgba(20, 40, 55, 0.9);
+    padding-left: 10px;
+    padding-right:10px;
+    /* margin-top: 10px; */
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.photo-content-display {
+    margin-top: 10px;
+    
 }
