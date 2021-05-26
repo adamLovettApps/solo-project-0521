@@ -10,7 +10,11 @@ function EditCaption({setShowModal, photo}) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(updatePhotoCaption())
+        const data = {
+            id: photo.id,
+            caption: caption
+        }
+        dispatch(updatePhotoCaption(data))
         setShowModal(false);
         // return dispatch(sessionActions.login({ credential, password })).catch(
         //     async (res) => {

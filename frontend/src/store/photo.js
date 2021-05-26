@@ -32,16 +32,17 @@ const updateCaption = (photoInfo) => ({
 })
 
 export const updatePhotoCaption = photoInfo => async (dispatch) => {
+    console.log("PHOTOINFO", photoInfo);
     const {id, caption} = photoInfo;
     const res = await csrfFetch(`/api/photos/updateCaption/${id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
         },
-        body: caption,
+        body: JSON.stringify(photoInfo)
     });
 
-    dispatch(updateCaption(photoInfo));
+    //dispatch(updateCaption(photoInfo));
 }
 
 export const removeCurrentPhoto = (id) => async (dispatch) => {

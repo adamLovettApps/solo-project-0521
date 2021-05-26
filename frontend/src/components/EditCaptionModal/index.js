@@ -15,7 +15,7 @@ function EditCaptionModal({photo}) {
             <i className="fas fa-user-edit edit-icon" onClick={() => setShowModal(true)}></i>
             {showModal && (
                 <Modal className='edit-caption-form' onClose={() => setShowModal(false)}>
-                    {/* <EditCaption photo={photo} setShowModal={setShowModal}/> */}
+                    <EditCaption photo={photo} setShowModal={setShowModal}/>
                 </Modal>
             )}
         </>
