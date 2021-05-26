@@ -2,7 +2,7 @@ const express = require('express');
 const asyncHandler = require('express-async-handler');
 const { check } = require('express-validator');
 const { setTokenCookie, restoreUser } = require('../../utils/auth');
-const { Comment } = require('../../db/models');
+const { Comment, User } = require('../../db/models');
 const { handleValidationErrors } = require('../../utils/validation');
 const router = express.Router();
 
@@ -25,8 +25,13 @@ router.get('/:photoId', asyncHandler(async(req, res) => {
     const photoId = parseInt(req.params.photoId);
     const comments = await Comment.findAll({
         where: {
-            photoId = photoId
-        }
+            photoId : photoId
+        },
+        include: [
+            {
+                model: User
+            }
+        ]
     })
 
     return res.json(comments);

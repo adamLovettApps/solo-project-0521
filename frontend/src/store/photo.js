@@ -118,10 +118,6 @@ const photoReducer = (state = initialState, action) => {
                     photo.caption = newCaption;
                 }
             })
-            // console.log("STATE", state.photos)
-            // console.log("PAYLOAD", action.payload)
-            // console.log("id", id)
-            // console.log("caption", newCaption);
             return {...state, photos: newArray};
         default:
             return state;

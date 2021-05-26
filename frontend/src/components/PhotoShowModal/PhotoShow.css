@@ -73,8 +73,9 @@
     padding: 10px;
     border: 1px dotted #C4F1BE;
     border-radius: 5px;
-    position:absolute;
+    position: relative;
     padding-top:20px;
+    color: #F5F3E0;
 }
 
 .edit-icon {

@@ -11,8 +11,8 @@ import UserPageBanner from './UserPageBanner';
 function UserPage() {
 
     const photos = useSelector((state) => state.photos);
-    const user = useSelector((state) => state.session.user)
-    const currentUserPage = useSelector((state) => state.currentPage)
+    const user = useSelector((state) => state.session.user);
+    const currentUserPage = useSelector((state) => state.currentPage);
     
     const photoArray = photos.photos;
     const { id } = useParams();

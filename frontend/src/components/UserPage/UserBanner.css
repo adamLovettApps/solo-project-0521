@@ -32,11 +32,12 @@
     position: relative;
     bottom: 200px;
     margin-bottom: -200px;
+    padding-left: 5px;
 }
 
 .activeProfilePhoto {
     position: relative;
-    left: 5px;
+    margin-left: 5px;
 
 }
 

@@ -1,0 +1,65 @@
+
+
+.single-comment-container {
+    margin-right:auto;
+    margin-left: auto;
+    border: 1px dotted #C4F1BE;
+    margin-bottom: 10px;
+    position: relative;
+    display:inline-block;
+    width: 650px;
+    background-color:  #142837; 
+    border-radius: 5px;
+}
+
+.user-comment-information {
+    display:flex;
+    justify-content: flex-start;
+    margin-top: 7px;
+    margin-left: 7px;
+    color: #C4F1BE;
+}
+
+.username-display {
+    color: #C4F1BE;
+    margin-left: 7px;
+    display:inline-block;
+    text-decoration: underline solid #C4F1BE ;
+}
+
+.user-comment-body {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    width: 500px;
+    text-align: left;
+    border: 3px solid #1B364B;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.user-comment-actions {
+    display:flex;
+    justify-content: flex-end;
+    margin-right: 7px;
+    margin-bottom: 7px;
+}
+
+.fa-pen {
+    color:rgba(196, 241, 190, 0.6);
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
+    padding-right: 7px;
+}
+
+.fa-pen:hover {
+    color: rgba(148, 230, 137, 0.6);
+}
+
+.fa-trash {
+    color:rgba(196, 241, 190, 0.6);
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.fa-trash:hover {
+    color: rgba(148, 230, 137, 0.6);
+}

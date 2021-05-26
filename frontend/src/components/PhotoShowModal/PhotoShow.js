@@ -3,6 +3,7 @@ import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeCurrentPhoto } from '../../store/photo';
 import EditCaptionModal from '../EditCaptionModal';
+import CommentContainer from '../CommentContainer';
 import './PhotoShow.css';
 
 function PhotoShow({photo, setShowModal}) {
@@ -72,13 +73,16 @@ function PhotoShow({photo, setShowModal}) {
                     </i>
                 </div>
                     {caption}
+                    <CommentContainer photo={photo}></CommentContainer>
                 </div>
+                
             );
         } else {
             return (
                 <div className='photo-show-modal'>
                 <div className='photo-div'><img alt="Concert" src={url}></img></div>
                 {caption}
+                <CommentContainer photo={photo}></CommentContainer>
                 </div>
             );
         }
@@ -87,6 +91,7 @@ function PhotoShow({photo, setShowModal}) {
                 <div className='photo-show-modal'>
                 <div className='photo-div'><img alt="Concert" src={url}></img></div>
                 {caption}
+                <CommentContainer photo={photo}></CommentContainer>
                 </div>
             );
     }
