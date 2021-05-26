@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { getAllPhotoComments } from "../../store/comment";
 import Comment from '../Comment';
+import AddCommentModal from '../AddCommentModal';
+
 import './CommentContainer.css';
 
 function CommentContainer({photo}) {
@@ -11,14 +13,19 @@ function CommentContainer({photo}) {
 
     const dispatch = useDispatch();
 
-    console.log(comments);
     useEffect(() => {
         dispatch(getAllPhotoComments(photo.id));
-    }, [])
+    }, [dispatch, photo.id])
 
+    let content;
+
+    if (user) {
+        content = (<AddCommentModal photoId={photo.id}></AddCommentModal>)
+    }
     
         return (
             <div className='comment-container'>
+                {content}
                 {comments.map((comment) => 
                     <Comment key={comment.id} comment={comment}></Comment>
                 )}

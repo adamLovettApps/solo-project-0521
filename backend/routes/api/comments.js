@@ -31,7 +31,9 @@ router.get('/:photoId', asyncHandler(async(req, res) => {
             {
                 model: User
             }
-        ]
+        ],
+        order: [['createdAt', 'ASC']]
+        
     })
 
     return res.json(comments);
@@ -53,7 +55,8 @@ router.delete('/:id', asyncHandler(async(req, res) => {
 }))
 
 
-router.put(':/id', asyncHandler(async(req, res) => {
+router.put('/:id', asyncHandler(async(req, res) => {
+
     const id = parseInt(req.params.id);
     const { body } = req.body;
 
