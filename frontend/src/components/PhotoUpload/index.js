@@ -7,7 +7,7 @@ const PhotoUpload = ({setShowModal}) => {
     const [image, setImage] = useState(null);
   // for multuple file upload
   //   const [images, setImages] = useState([]);
-    const [errors, setErrors] = useState([]);
+    // const [errors, setErrors] = useState([]);
     const [caption, setCaption] = useState('');
 
     const dispatch = useDispatch();
@@ -15,7 +15,7 @@ const PhotoUpload = ({setShowModal}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        let newErrors = [];
+        // let newErrors = [];
         dispatch(addNewPhoto({  image, user, caption }))
         setImage(null);
         setShowModal(false);
@@ -33,8 +33,8 @@ const PhotoUpload = ({setShowModal}) => {
 
     return (
         <div>
-        {errors.length > 0 &&
-            errors.map((error) => <div key={error}>{error}</div>)}
+        {/* {errors.length > 0 &&
+            errors.map((error) => <div key={error}>{error}</div>)} */}
         
         <div className='add-photo-form-wrapper'>
         <span className='add-photo-header'>Add a Photo</span>

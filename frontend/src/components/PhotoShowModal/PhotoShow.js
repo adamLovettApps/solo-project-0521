@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import * as sessionActions from '../../store/session';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeCurrentPhoto } from '../../store/photo';
 import EditCaptionModal from '../EditCaptionModal';
@@ -10,7 +9,6 @@ function PhotoShow({photo, setShowModal}) {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
     const currentUserPage = useSelector((state) => state.currentPage.currentUserPage)
-    const photos = useSelector((state) => state.photos)
     const baseURL = photo.url.split('/')[3];
     const clickHandler = () => {
         dispatch(removeCurrentPhoto(photo.id))

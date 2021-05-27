@@ -7,7 +7,7 @@ function AddComment({setShowModal, photoId}) {
     const dispatch = useDispatch();
     const sessionUser = useSelector((state) => state.session.user);
     const [comment, setComment] = useState("");
-    const [errors, setErrors] = useState([]);
+    // const [errors, setErrors] = useState([]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -27,9 +27,9 @@ function AddComment({setShowModal, photoId}) {
         <div className='add-comment-form-wrapper'>
         <span className='add-comment-header'>Make Some Noise</span>
         <form onSubmit={handleSubmit}>
-            <ul>
+            {/* <ul>
                 {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-            </ul>
+            </ul> */}
             <div className='add-comment-modal-form'>
             <div className='form-field-input'>
             

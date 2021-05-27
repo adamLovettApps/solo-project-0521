@@ -11,7 +11,7 @@ function PhotoShowModal({photo}) {
             <button className = 'btn photo-show-btn' onClick={() => setShowModal(true)}></button>
             {showModal && (
                 <Modal className='photo-show-modal' onClose={() => setShowModal(false)}>
-                    <PhotoShow setShowModal={setShowModal} className='photo-show' photo={photo} setShowModal={setShowModal}/>
+                    <PhotoShow setShowModal={setShowModal} className='photo-show' photo={photo} />
                 </Modal>
             )}
         </>

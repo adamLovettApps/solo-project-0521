@@ -1,6 +1,5 @@
 import React from 'react';
-import { useEffect, useState } from "react";
-import  PhotoUpload  from '../PhotoUpload';
+import { useEffect } from "react";
 import PhotoGallery from '../PhotoGallery';
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
@@ -12,7 +11,6 @@ function UserPage() {
 
     const photos = useSelector((state) => state.photos);
     const user = useSelector((state) => state.session.user);
-    const currentUserPage = useSelector((state) => state.currentPage);
     
     const photoArray = photos.photos;
     const { id } = useParams();

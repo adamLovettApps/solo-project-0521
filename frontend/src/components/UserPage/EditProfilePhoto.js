@@ -7,15 +7,15 @@ const EditProfilePhoto = ({setShowModal}) => {
     const [image, setImage] = useState(null);
   // for multuple file upload
   //   const [images, setImages] = useState([]);
-    const [errors, setErrors] = useState([]);
-    const [caption, setCaption] = useState('');
+    // const [errors, setErrors] = useState([]);
+    // const [caption, setCaption] = useState('');
 
     const dispatch = useDispatch();
     const user = useSelector((state) => state.session.user);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        let newErrors = [];
+        // let newErrors = [];
         dispatch(updateProfilePhoto({ image, user }))
         setImage(null);
         setShowModal(false);
@@ -32,8 +32,8 @@ const EditProfilePhoto = ({setShowModal}) => {
 
     return (
         <div>
-        {errors.length > 0 &&
-            errors.map((error) => <div key={error}>{error}</div>)}
+        {/* {errors.length > 0 &&
+            errors.map((error) => <div key={error}>{error}</div>)} */}
         
         <div className='add-photo-form-wrapper'>
         <span className='add-photo-header'>Change Your Profile Photo</span>

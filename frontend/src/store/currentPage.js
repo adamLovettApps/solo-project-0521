@@ -1,5 +1,4 @@
 import { csrfFetch } from './csrf';
-import { addAllPhotosGlobal } from './photo';
 
 const GET_USER = "currentPage/getUser";
 const UPDATE_PROFILE_PHOTO = "currentPage/updateUserProfilePhoto"

@@ -15,10 +15,10 @@ const deleteComment = comment => ({
     payload: comment
 });
 
-const editComment = commentInfo => ({
-    type: EDIT_COMMENT,
-    payload: commentInfo
-})
+// const editComment = commentInfo => ({
+//     type: EDIT_COMMENT,
+//     payload: commentInfo
+// })
 
 const addComment = comment => ({
     type: ADD_COMMENT,
@@ -81,7 +81,6 @@ const commentReducer = (state = initialState, action) => {
             const newCommentArray = commentArray.filter((comment) => comment.id !== action.payload);
             return {...state, comments: newCommentArray};
         case EDIT_COMMENT:
-            console.log('HERE(**********************************')
             const id = action.payload.id;
             const body = action.payload.body;
             const editArray = [...state.comments];

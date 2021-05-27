@@ -5,6 +5,7 @@ import UserPage from "./components/UserPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import LandingPage from "./components/LandingPage"
+import Footer from "./components/Footer";
 
 function App() {
   const dispatch = useDispatch();
@@ -24,11 +25,9 @@ function App() {
             <Route path='/users/:id'>
               <UserPage />
             </Route>
-          {/* <Route path="/signup">
-            <SignupFormPage />
-          </Route> */}
         </Switch>
       )}
+      <Footer></Footer>
     </>
   );
 }

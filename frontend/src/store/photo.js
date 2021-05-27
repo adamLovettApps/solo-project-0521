@@ -1,7 +1,7 @@
 import { csrfFetch } from './csrf';
 
 const ADD_PHOTO = "photo/addPhoto";
-const ADD_ALL = "photos/addAll";
+// const ADD_ALL = "photos/addAll";
 const REMOVE_ALL = "photos/removeAll";
 const REMOVE_PHOTO = "photos/removePhoto";
 const UPDATE_CAPTION = "photos/updateCaption";
@@ -12,10 +12,10 @@ const addPhoto = photo => ({
     payload: photo
 });
 
-const addAll = photos => ({
-    type: ADD_ALL,
-    payload: photos
-});
+// const addAll = photos => ({
+//     type: ADD_ALL,
+//     payload: photos
+// });
 
 const removeAll = () => ({
     type: REMOVE_ALL,
@@ -33,8 +33,8 @@ const updateCaption = (photoInfo) => ({
 
 export const updatePhotoCaption = photoInfo => async (dispatch) => {
 
-    const {id, caption} = photoInfo;
-    const res = await csrfFetch(`/api/photos/updateCaption/${id}`, {
+    const {id} = photoInfo;
+    await csrfFetch(`/api/photos/updateCaption/${id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
@@ -46,7 +46,7 @@ export const updatePhotoCaption = photoInfo => async (dispatch) => {
 }
 
 export const removeCurrentPhoto = (id) => async (dispatch) => {
-    const res = await csrfFetch(`/api/photos/${id}`, {
+    await csrfFetch(`/api/photos/${id}`, {
         method: "DELETE"
     });
 

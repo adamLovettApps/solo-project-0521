@@ -1,6 +1,5 @@
 import React from 'react';
-import { useEffect, useState } from "react";
-import  PhotoUpload  from '../PhotoUpload';
+import { useEffect } from "react";
 import LandingPhotoGallery from '../LandingPhotoGallery';
 import { useDispatch, useSelector } from "react-redux";
 import { addAllPhotosGlobal } from '../../store/photo';

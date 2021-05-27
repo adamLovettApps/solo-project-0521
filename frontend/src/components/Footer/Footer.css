@@ -1,0 +1,9 @@
+.footer-container {
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container-wrapper {
+    position:absolute;
+}

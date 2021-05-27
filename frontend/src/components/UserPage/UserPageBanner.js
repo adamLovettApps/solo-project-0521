@@ -1,11 +1,8 @@
 import React from 'react';
-import { useEffect, useState } from "react";
-import  PhotoUpload  from '../PhotoUpload';
-import PhotoGallery from '../PhotoGallery';
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
-import { addAllPhotos } from '../../store/photo';
-import currentPageReducer, { getCurrentUserPage } from '../../store/currentPage';
+import { getCurrentUserPage } from '../../store/currentPage';
 import PhotoUploadModal from '../PhotoUploadModal';
 import EditProfilePhotoModal from './EditProfilePhotoModal';
 import EditCoverPhotoModal from './EditCoverPhotoModal';
