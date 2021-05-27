@@ -41,7 +41,7 @@ function AddComment({setShowModal, photoId}) {
             </div>
 
             <div className='form-field-button'>
-            <button className='signup-submit-button' type="submit">Roar</button>
+            <button className='signup-submit-button' type="submit">Post</button>
             </div>
             </div>
         </form>
