@@ -44,7 +44,7 @@
     padding: 5px;
     background-color: #142837;
     border: 1px dotted #C4F1BE;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .delete-image-icon {
@@ -104,4 +104,8 @@
 ::-webkit-scrollbar {
     width: 0;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.current-display-photo {
+    border-radius: 10px;
 }

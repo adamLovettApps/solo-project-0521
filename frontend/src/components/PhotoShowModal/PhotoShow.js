@@ -52,7 +52,7 @@ function PhotoShow({photo, setShowModal}) {
                         document.getElementById('delete-icon-container').classList.add('delete-icon-container-hidden')
                     }
                 >
-                    <img alt="Concert" src={url}
+                    <img className='current-display-photo' alt="Concert" src={url}
                         onMouseOver={() => 
                         document.getElementById('delete-icon-container').classList.remove('delete-icon-container-hidden')
                     }
@@ -78,7 +78,7 @@ function PhotoShow({photo, setShowModal}) {
         } else {
             return (
                 <div className='photo-show-modal'>
-                <div className='photo-div'><img alt="Concert" src={url}></img></div>
+                <div className='photo-div'><img className='current-display-photo' alt="Concert" src={url}></img></div>
                 {caption}
                 <CommentContainer photo={photo}></CommentContainer>
                 </div>
@@ -87,7 +87,7 @@ function PhotoShow({photo, setShowModal}) {
     } else {
         return (
                 <div className='photo-show-modal'>
-                <div className='photo-div'><img alt="Concert" src={url}></img></div>
+                <div className='photo-div'><img className='current-display-photo' alt="Concert" src={url}></img></div>
                 {caption}
                 <CommentContainer photo={photo}></CommentContainer>
                 </div>
