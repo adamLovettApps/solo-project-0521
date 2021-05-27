@@ -1,9 +1,18 @@
 import React from 'react';
+import './Footer.css';
 
 function Footer () {
 
     return (
-        <><div className='footer-container-wrapper'><div className='footer-container'>Developed By:</div></div></>
+        <>
+            <div className='developed-by'>Developed By</div>
+            <div className='developer-name'>Adam Lovett</div>
+            <div className='contact-link-container'>
+                <a className='contact-link' href='https://github.com/adamLovettApps'>Github</a> |
+                <a className='contact-link' href='https://www.linkedin.com'>LinkedIn</a> |
+                <a className='contact-link' href='mailto:adamlovett@alumni.usc.edu'>Email</a>
+            </div>
+        </>
     )
 }
 

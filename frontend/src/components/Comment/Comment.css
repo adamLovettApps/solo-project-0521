@@ -24,7 +24,7 @@
     color: #C4F1BE;
     margin-left: 7px;
     display:inline-block;
-    text-decoration: underline solid #C4F1BE ;
+    /* text-decoration: underline solid #C4F1BE ; */
 }
 
 .user-comment-body {

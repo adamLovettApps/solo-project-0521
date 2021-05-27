@@ -1,9 +1,40 @@
 .footer-container {
-    max-width: 1400px;
-    display: flex;
+    color: #C4F1BE;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 200px;
     justify-content: center;
 }
 
-.footer-container-wrapper {
-    position:absolute;
+.developed-by {
+    margin-top: 50px;
+    text-decoration: underline;
+    margin-left: auto;
+    margin-right: auto;
+    width: 103px;
+    color: #C4F1BE;
 }
+
+.developer-name {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95px;
+    color: #C4F1BE;
+}
+
+.contact-link-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 182px;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #C4F1BE;
+}
+
+.contact-link:hover {
+    color: #94E689;
+}
+

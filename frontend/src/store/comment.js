@@ -91,7 +91,6 @@ const commentReducer = (state = initialState, action) => {
                     return comment;
                 }
             })
-            console.log(newEditArray)
             return {...state, comments: newEditArray};
     default:
         return { ...state }
