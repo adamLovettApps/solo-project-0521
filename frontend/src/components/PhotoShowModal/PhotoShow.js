@@ -34,7 +34,7 @@ function PhotoShow({photo, setShowModal}) {
     let caption;
     if (sessionUser){
         if (sessionUser.id === photo.userId) {
-            caption = (<><div className='caption-container'>{photo.caption}<div className='edit-caption-content'><EditCaptionModal photo={photo}></EditCaptionModal></div></div></>);
+            caption = (<div><div className='caption-container'>{photo.caption}</div><div className='edit-caption-content'><EditCaptionModal photo={photo}></EditCaptionModal></div></div>);
         } else {
             caption = (<><div className='caption-container'>{photo.caption}</div></>);
         }

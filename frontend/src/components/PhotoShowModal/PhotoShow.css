@@ -67,21 +67,26 @@
 .caption-container {
     width: 600px;
     margin-right: 50px;
-    margin-left: 40px;
+    margin-left: 20px;
     background-color: #142837;
     margin-top: 10px;
+    padding-bottom: 0px;
     padding: 10px;
+    padding-bottom: 20px;
     border: 1px dotted #C4F1BE;
     border-radius: 5px;
     position: relative;
     padding-top:20px;
     color: #F5F3E0;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: justify;
 }
 
 .edit-icon {
     position: relative;
-    left: 335px;
-    top: -25px;
+    left: 650px;
+    top: -30px;
     color:rgba(196, 241, 190, 0.6);
     text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
 }
@@ -91,9 +96,9 @@
 }
 
 .edit-caption-content {
-    position: relative;
+    /* position: relative;
     left: -5px;
-    bottom: -28px;
+    bottom: -28px; */
 }
 
 ::-webkit-scrollbar {

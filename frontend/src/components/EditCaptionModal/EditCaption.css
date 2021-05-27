@@ -1,7 +1,7 @@
 .edit-icon {
     
     position: relative;
-    
+    left: 200px;
     font-size: 20px;
     color: white;
     /* border:none;
@@ -11,6 +11,10 @@
     position:absolute;
     top: 50px;
     left: 00px; */
+}
+
+.edit-icon-container {
+    position: absolute;
 }
 
 

@@ -11,14 +11,14 @@ function EditCaptionModal({photo}) {
     }, [showModal])
 
     return (
-        <>
+        <div className="edit-icon-container">
             <i className="fas fa-user-edit edit-icon" onClick={() => setShowModal(true)}></i>
             {showModal && (
                 <Modal className='edit-caption-form' onClose={() => setShowModal(false)}>
                     <EditCaption photo={photo} setShowModal={setShowModal}/>
                 </Modal>
             )}
-        </>
+        </div>
     );
 }
 
