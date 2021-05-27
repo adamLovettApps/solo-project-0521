@@ -66,11 +66,14 @@ const UserPageBanner = (loggedUser) => {
                 </div>
                     <div className='header-info-container'>
                         <div className='left-side-header'>
-                            <span className="activeProfilePhoto"><img alt="Profile" src={profileUrl}></img> </span>
+                            <div>
+                                <span className="activeProfilePhoto"><img alt="Profile" src={profileUrl}></img> </span>
+                                <EditProfilePhotoModal></EditProfilePhotoModal>
+                            </div>    
                             <span className="activeProfileName">{currentUserPage.currentUserPage.username}'s Concrts</span>    
-                            <EditProfilePhotoModal></EditProfilePhotoModal>        
+                                
                         </div>
-                        <div className='left-side-header'>    
+                        <div className='right-side-header'>    
                             <EditCoverPhotoModal></EditCoverPhotoModal>
                             <PhotoUploadModal></PhotoUploadModal>
                         </div>

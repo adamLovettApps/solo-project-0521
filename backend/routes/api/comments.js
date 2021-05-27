@@ -32,7 +32,7 @@ router.get('/:photoId', asyncHandler(async(req, res) => {
                 model: User
             }
         ],
-        order: [['createdAt', 'ASC']]
+        order: [['createdAt', 'DESC']]
         
     })
 

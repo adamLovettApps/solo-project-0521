@@ -43,8 +43,8 @@
 
 .activeProfileName {
     position: relative;
-    bottom: 45px;
-    left: 5px;
+    bottom: 85px;
+    left: 90px;
     height:40px;
     color: #C4F1BE;
     font-size: 28px;
@@ -60,7 +60,7 @@
 
 .edit-profile-photo {
     position: relative;
-    right: 235px;
+    right: 25px;
     bottom: 5px;
     color:rgba(196, 241, 190, 0.6);
     text-shadow: 1px 1px rgba(255, 255, 255, 0.3);;
@@ -93,14 +93,14 @@
 
 .profilePhoto {
     position: relative;
-    bottom: 195px;
-    left: 5px;
+    bottom: 194px;
+    left: 8px;
 }
 
 .profileName {
     position: relative;
-    bottom: 270px;
-    left: 90px;
+    bottom: 274px;
+    left: 93px;
     
     height:40px;
     color: #C4F1BE;
