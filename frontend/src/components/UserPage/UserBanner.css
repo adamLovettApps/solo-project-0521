@@ -49,11 +49,11 @@
     color: #C4F1BE;
     font-size: 28px;
 
-    background-color: rgba(20, 40, 55, 0.7);
+    background-color: rgba(20, 40, 55, 0.5);
     padding-left: 10px;
     padding-right:10px;
     /* margin-top: 10px; */
-    border-radius: 8px;
+    border-radius: 12px;
     display: inline-block;
 }
 
@@ -87,7 +87,7 @@
     right: 10px;
     height: 27px;
     font-size: 16px;
-    background-color: rgba(20, 40, 55, 0.7);
+    background-color: rgba(20, 40, 55, 0.5);
     border-radius: 8px;
 }
 
@@ -106,11 +106,11 @@
     color: #C4F1BE;
     font-size: 28px;
 
-    background-color: rgba(20, 40, 55, 0.67);
+    background-color: rgba(20, 40, 55, 0.5);
     padding-left: 10px;
     padding-right:10px;
     /* margin-top: 10px; */
-    border-radius: 8px;
+    border-radius: 12px;
     display: inline-block;
 }
 
